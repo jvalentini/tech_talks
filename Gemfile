@@ -50,3 +50,7 @@ gem 'devise', '~> 4.0.1'
 group :development do
   gem 'guard'
 end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end

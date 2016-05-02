@@ -49,6 +49,7 @@ gem 'devise', '~> 4.0.1'
 
 group :development do
   gem 'guard'
+  gem 'guard-bundler', require: false
 end
 
 group :development, :test do

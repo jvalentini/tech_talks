@@ -25,3 +25,5 @@
 /spec/tmp
 **.orig
 TAGS
+
+npm-debug.log

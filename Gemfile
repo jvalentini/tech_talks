@@ -55,6 +55,8 @@ group :development do
   gem 'guard-bundler', require: false
   gem 'guard-rspec', require: false
   gem 'guard-rails', require: false
+  gem 'guard-ctags-bundler', require: false
+
   gem 'pry'
   gem 'pry-doc'
   gem 'pry-rails'

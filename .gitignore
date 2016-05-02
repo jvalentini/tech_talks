@@ -24,6 +24,10 @@
 /coverage/
 /spec/tmp
 **.orig
+
+# CTags
 TAGS
+tags
+gems.tags
 
 npm-debug.log

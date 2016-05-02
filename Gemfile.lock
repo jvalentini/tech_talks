@@ -83,6 +83,9 @@ GEM
       guard (~> 2.2)
       guard-compat (~> 1.1)
     guard-compat (1.2.1)
+    guard-ctags-bundler (1.4.0)
+      guard (>= 2.0)
+      guard-compat (>= 0.1.0)
     guard-rails (0.7.2)
       guard (~> 2.11)
       guard-compat (~> 1.0)
@@ -238,6 +241,7 @@ DEPENDENCIES
   devise (~> 4.0.1)
   guard
   guard-bundler
+  guard-ctags-bundler
   guard-rails
   guard-rspec
   jbuilder (~> 2.0)

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tech_talk.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tech_talk.description %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @tech_talk.length %>
+</p>
+
+<p>
+  <strong>Like:</strong>
+  <%= @tech_talk.like %>
+</p>
+
+<p>
+  <strong>Views:</strong>
+  <%= @tech_talk.views %>
+</p>
+
+<%= link_to 'Edit', edit_tech_talk_path(@tech_talk) %> |
+<%= link_to 'Back', tech_talks_path %>

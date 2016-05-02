@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tech Talks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Length</th>
+      <th>Like</th>
+      <th>Views</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tech_talks.each do |tech_talk| %>
+      <tr>
+        <td><%= tech_talk.title %></td>
+        <td><%= tech_talk.description %></td>
+        <td><%= tech_talk.length %></td>
+        <td><%= tech_talk.like %></td>
+        <td><%= tech_talk.views %></td>
+        <td><%= link_to 'Show', tech_talk %></td>
+        <td><%= link_to 'Edit', edit_tech_talk_path(tech_talk) %></td>
+        <td><%= link_to 'Destroy', tech_talk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tech talk', new_tech_talk_path %>

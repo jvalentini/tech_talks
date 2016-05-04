@@ -62,13 +62,14 @@ class TechTalksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_tech_talk
-      @tech_talk = TechTalk.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def tech_talk_params
-      params.require(:tech_talk).permit(:title, :description, :length, :like, :views)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_tech_talk
+    @tech_talk = TechTalk.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def tech_talk_params
+    params.require(:tech_talk).permit(:title, :description, :length, :like, :views)
+  end
 end

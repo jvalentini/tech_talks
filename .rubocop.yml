@@ -1,4 +1,4 @@
-# require: rubocop-rspec
+require: rubocop-rspec
 
 Rails:
   Enabled: true
@@ -15,3 +15,11 @@ Metrics/MethodLength:
 
 Style/Documentation:
   Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/**/*.erb_spec.rb'
+
+RSpec/FilePath:
+  Exclude:
+    - 'spec/**/*_routing_spec.rb'

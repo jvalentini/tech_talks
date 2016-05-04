@@ -1,0 +1,17 @@
+# require: rubocop-rspec
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 100
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/**/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/**/*'
+
+Style/Documentation:
+  Enabled: false

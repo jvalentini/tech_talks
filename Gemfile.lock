@@ -94,6 +94,9 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    guard-rubocop (1.2.0)
+      guard (~> 2.0)
+      rubocop (~> 0.20)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -200,6 +203,8 @@ GEM
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
+    rubocop-rspec (1.4.1)
+      rubocop (= 0.39.0)
     ruby-progressbar (1.8.0)
     sass (3.4.22)
     sass-rails (5.0.4)
@@ -259,6 +264,7 @@ DEPENDENCIES
   guard-ctags-bundler
   guard-rails
   guard-rspec
+  guard-rubocop
   jbuilder (~> 2.0)
   jquery-rails
   pry
@@ -267,6 +273,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   rspec-rails (~> 3.0)
   rubocop
+  rubocop-rspec
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

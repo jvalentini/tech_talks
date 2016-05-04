@@ -44,6 +44,7 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   gem 'rubocop', require: false
+  gem 'rubocop-rspec'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -58,6 +59,7 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'guard-rails', require: false
   gem 'guard-ctags-bundler', require: false
+  gem 'guard-rubocop', require: false
 
   gem 'pry'
   gem 'pry-doc'

@@ -24,11 +24,11 @@ RSpec.describe TechTalksController, type: :controller do
   # TechTalk. As you add validations to TechTalk, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { title: "My tech talk" }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { title: "" }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,14 +103,14 @@ RSpec.describe TechTalksController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        { title: "My updated tech talk" }
       }
 
       it "updates the requested tech_talk" do
         tech_talk = TechTalk.create! valid_attributes
         put :update, {:id => tech_talk.to_param, :tech_talk => new_attributes}, valid_session
         tech_talk.reload
-        skip("Add assertions for updated state")
+        expect(assigns(:tech_talk)).to eq(tech_talk)
       end
 
       it "assigns the requested tech_talk as @tech_talk" do

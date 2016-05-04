@@ -18,7 +18,14 @@ class TechTalksControllerTest < ActionController::TestCase
 
   test 'should create tech_talk' do
     assert_difference('TechTalk.count') do
-      post :create, tech_talk: { description: @tech_talk.description, length: @tech_talk.length, like: @tech_talk.like, title: @tech_talk.title, views: @tech_talk.views }
+      post :create,
+           tech_talk: {
+             description: @tech_talk.description,
+             length: @tech_talk.length,
+             like: @tech_talk.like,
+             title: @tech_talk.title,
+             views: @tech_talk.views
+           }
     end
 
     assert_redirected_to tech_talk_path(assigns(:tech_talk))
@@ -35,7 +42,15 @@ class TechTalksControllerTest < ActionController::TestCase
   end
 
   test 'should update tech_talk' do
-    patch :update, id: @tech_talk, tech_talk: { description: @tech_talk.description, length: @tech_talk.length, like: @tech_talk.like, title: @tech_talk.title, views: @tech_talk.views }
+    patch :update,
+          id: @tech_talk,
+          tech_talk: {
+            description: @tech_talk.description,
+            length: @tech_talk.length,
+            like: @tech_talk.like,
+            title: @tech_talk.title,
+            views: @tech_talk.views
+          }
     assert_redirected_to tech_talk_path(assigns(:tech_talk))
   end
 

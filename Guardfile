@@ -81,6 +81,7 @@ guard :rspec, cmd: 'bin/rspec' do
   end
 end
 
+# rubocop:disable all
 # Guard-Rails supports a lot options with default values:
 # daemon: false                        # runs the server as a daemon.
 # debugger: false                      # enable ruby-debug gem.
@@ -96,6 +97,7 @@ end
 # zeus_plan: server                    # custom plan in zeus, only works with `zeus: true`.
 # zeus: false                          # enables zeus gem.
 # CLI: 'rails server'                  # customizes runner command. Omits all options except `pid_file`!
+# rubocop:enable all
 
 guard 'rails' do
   watch('Gemfile.lock')
@@ -103,6 +105,11 @@ guard 'rails' do
 end
 
 guard 'ctags-bundler', src_path: ['app', 'lib', 'spec/support'], emacs: true do
-  watch(/^(app|lib|spec\/support)\/.*\.rb$/)
+  watch(%r{^(app|lib|spec\/support)\/.*\.rb$})
   watch('Gemfile.lock')
+end
+
+guard :rubocop do
+  watch(/.+\.rb$/)
+  watch(%r{(?:.+/)?\.rubocop\.yml$}) { |m| File.dirname(m[0]) }
 end
